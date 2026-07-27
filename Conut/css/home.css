@@ -1,0 +1,94 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+img,
+video {
+  max-width: 100%;
+  height: auto;
+}
+
+html,
+body {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+#home {
+  background: url("../assets/bg.jpg");
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 100vh;
+  background-clip: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#main_heading {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 200px;
+}
+#slogan {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-size: 30px;
+  color: brown;
+}
+
+#contact_info {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap; /* Prevents horizontal overflow on phones */
+  justify-content: start;
+  align-items: center;
+  gap: 20px;
+  width: 100%; /* Spreads items across the available width */
+  margin: 0;
+  padding: 10px;
+}
+
+/* Optional clean up for the outer tag */
+address {
+  width: 100%;
+  height: 40px;
+  background-color: rgb(211, 164, 94);
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  padding: 15px 30px;
+  background-color: #c99173e2;
+}
+
+#logo {
+  margin: 0;
+  padding: 0;
+}
+
+#navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+  gap: 20px;
+}

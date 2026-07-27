@@ -1,0 +1,11 @@
+{
+  "name": "conut",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "format": "prettier --write \"**/*.{html,css,js,ts,json,md}\""
+  },
+  "devDependencies": {
+    "prettier": "^3.0.0"
+  }
+}
