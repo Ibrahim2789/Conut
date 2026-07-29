@@ -3,6 +3,21 @@
   margin: 0;
   padding: 0;
 }
+:root {
+  --primary: #d89b2d; /* Warm Caramel */
+  --secondary: #f80d15; /* Raspberry Red */
+  --dark: #12361e; /* Forest Green */
+
+  --background: #fbf6ee; /* Vanilla Cream */
+  --surface: #fffdf9; /* Soft White */
+
+  --heading: #231815; /* Rich Espresso */
+  --text: #6f6258; /* Warm Grey */
+
+  --border: #e8dccb; /* Light Beige */
+  --highlight: #f7d58b; /* Soft Gold Glow */
+  --white: #ffffff;
+}
 a {
   text-decoration: none;
   color: black;
@@ -18,7 +33,7 @@ html {
 }
 body {
   min-height: 100vh;
-  background-color: #fdf8f1;
+  background-color: var(--background);
   background-image:
     radial-gradient(circle at 80% 20%, rgba(255, 196, 75, 0.18), transparent 35%),
     radial-gradient(circle at 20% 80%, rgba(255, 220, 150, 0.12), transparent 40%);
@@ -40,58 +55,113 @@ body {
   height: 100vh;
   background-clip: border-box;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
 }
-#main {
+#main1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 550px;
+  height: 550px;
+  margin-top: 10px;
+  background: var(--primary);
+  border-radius: 50%;
+  box-shadow: 0 0 35px rgba(216, 155, 45, 0.35);
+}
+#main1 img {
+  width: 90%;
+  animation: float 3s ease-in-out infinite;
+  filter: drop-shadow(0 20px 30px rgba(0, 0, 0, 0.15));
+}
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+#logo {
+  width: 150px;
+}
+#cart {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+#main2 p {
+  max-width: 600px;
+  color: var(--text);
+  line-height: 1.8;
+}
+#main2 {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
-}
-#main_heading {
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-  font-size: 200px;
+  align-items: flex-start;
+  margin-left: 50px;
 }
 #slogan {
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
-  font-size: 30px;
-  color: brown;
+  font-size: 50px;
+  /* line-height: 1.4; */
+  color: var(--secondary);
+  font-weight: bold;
 }
-
-#contact_info {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap; /* Prevents horizontal overflow on phones */
-  justify-content: start;
-  align-items: center;
-  gap: 20px;
-  width: 100%; /* Spreads items across the available width */
-  margin: 0;
-  padding: 10px;
+#slogan::first-line {
+  color: var(--heading);
 }
 
 /* Optional clean up for the outer tag */
 address {
   width: 100%;
   height: 40px;
-  background-color: rgb(211, 164, 94);
+  background-color: var(--dark);
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap; /* Prevents horizontal overflow on phones */
+  align-items: center;
+  gap: 20px;
+  width: 100%; /* Spreads items across the available width */
+  margin: 0;
+  padding: 10px;
+  color: var(--white);
 }
-
+.contact-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+  margin-right: 20px;
+}
+.row {
+  margin-left: 65px;
+}
+.contact-text {
+  font-size: 13px;
+}
 nav {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  padding: 15px 30px;
-  background-color: #c99173e2;
+  padding: 10px 70px;
+  background-color: var(--surface);
 }
 
 #logo {
   margin: 0;
-  padding: 0;
+  padding: 0 40px;
+  width: 170px;
 }
 
 #navbar {
