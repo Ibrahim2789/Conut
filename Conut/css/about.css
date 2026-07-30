@@ -1,15 +1,13 @@
 #about {
-  width: 100%;
-  height: 100vh;
-  background-clip: border-box;
-  top: 0%;
-}
-#about {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   gap: 40px;
+  width: 100%;
+  height: 100vh;
+  background-clip: border-box;
+  top: 0%;
 }
 :root {
   --primary: #d89b2d; /* Warm Caramel */
@@ -26,22 +24,22 @@
   --highlight: #f7d58b; /* Soft Gold Glow */
   --white: #ffffff;
 }
-#about_info {
+#about-info {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-start;
   gap: 20px;
 }
-#about_middle2 {
+#about-details {
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
-#italic {
+#about-highlight {
   color: var(--accent);
 }
-#about_inner2 {
+#about-feature-1 {
   background-color: rgb(210, 144, 46);
   display: inline;
   width: 520px;
@@ -51,7 +49,7 @@
   padding: 15px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
 }
-#about_inner3 {
+#about-feature-2 {
   background-color: rgb(210, 144, 46);
   display: inline;
   width: 520px;
@@ -61,10 +59,10 @@
   padding: 15px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
 }
-.line_height {
+.text-relaxed {
   line-height: 1.7;
 }
-#about_middle1 {
+#about-image {
   position: relative;
   overflow: hidden;
   min-width: 500px;
@@ -74,7 +72,7 @@
   margin-left: 20px;
 }
 
-#about_middle1::before {
+#about-image::before {
   content: "";
   position: absolute;
   inset: 0;
@@ -85,14 +83,14 @@
   z-index: 0;
 }
 
-#about_middle1:hover::before {
+#about-image:hover::before {
   transform: rotate(15deg);
 }
-#inner_button {
+.cta-wrapper {
   display: flex;
   flex-direction: column;
 }
-#search_menu {
+.cta-link {
   background-color: var(--secondary);
   padding: 10px;
   /* border: 1px solid black; */
@@ -106,12 +104,12 @@
   align-items: center;
   row-gap: 10px;
 }
-#image {
+#icon-image {
   width: 23px;
   height: 23px;
 }
 
-#two_buttons {
+#hero-buttons {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -119,6 +117,6 @@
   margin-top: 35px;
 }
 
-#hero_span {
+#hero-menu-text {
   color: black;
 }

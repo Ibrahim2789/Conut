@@ -12,8 +12,8 @@
 <body>
     <header>
         <address>
-            <div class="contact-row row">
-                <span class="contact-icon">
+            <div class="header-contact-item header-contact-first">
+                <span class="header-contact-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#fdc50b" viewBox="0 0 24 24">
                         <!--Boxicons v3.0.8 https://boxicons.com | License  https://docs.boxicons.com/free-->
                         <path
@@ -21,10 +21,10 @@
                         </path>
                     </svg>
                 </span>
-                <span class="contact-text">+92-333-2848878</span>
+                <span class="header-contact-text">+92-333-2848878</span>
             </div>
-            <div class="contact-row">
-                <span class="contact-icon">
+            <div class="header-contact-item">
+                <span class="header-contact-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#fdc50b" viewBox="0 0 24 24">
                         <!--Boxicons v3.0.8 https://boxicons.com | License  https://docs.boxicons.com/free-->
                         <path
@@ -32,10 +32,10 @@
                         </path>
                     </svg>
                 </span>
-                <span class="contact-text">conuts@gmail.com</span>
+                <span class="header-contact-text">conuts@gmail.com</span>
             </div>
-            <div class="contact-row">
-                <span class="contact-icon">
+            <div class="header-contact-item">
+                <span class="header-contact-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#fdc50b" viewBox="0 0 24 24">
                         <!--Boxicons v3.0.8 https://boxicons.com | License  https://docs.boxicons.com/free-->
                         <path
@@ -46,18 +46,18 @@
                         </path>
                     </svg>
                 </span>
-                <span class="contact-text">I-8, Islamabad</span>
+                <span class="header-contact-text">I-8, Islamabad</span>
             </div>
         </address>
     </header>
     <nav>
         <a href="home.html">
-            <img src="../assets/logo.png" id="logo" alt="Conuts logo - coffee and donuts establishment branding"
-                width="50x" id="logo">
+            <img src="../assets/logo.png" id="site-logo" alt="Conuts logo - coffee and donuts establishment branding"
+                width="50x">
         </a>
-        <ul id="navbar" style="list-style-type: none;">
+        <ul id="main-nav" style="list-style-type: none;">
             <li>
-                <a href="#home">Home</a>
+                <a href="#hero">Home</a>
             </li>
             <li>
                 <a href="#about">About</a>
@@ -72,7 +72,7 @@
                 <a href="#contact">Contact</a>
             </li>
         </ul>
-        <div id="cart">
+        <div id="nav-actions">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#0a0a0a" viewBox="0 0 24 24">
                 <!--Boxicons v3.0.8 https://boxicons.com | License  https://docs.boxicons.com/free-->
                 <path
@@ -80,7 +80,7 @@
                 </path>
                 <path d="M12 13c-1.65 0-3-1.35-3-3H7c0 2.76 2.24 5 5 5s5-2.24 5-5h-2c0 1.65-1.35 3-3 3"></path>
             </svg>
-            <a href="#menu" id="search_menu">
+            <a href="#menu" class="cta-link">
                 Order Online
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#fff" viewBox="0 0 24 24">
                     <!--Boxicons v3.0.8 https://boxicons.com | License  https://docs.boxicons.com/free-->
@@ -89,15 +89,16 @@
         </div>
     </nav>
     <main>
-        <section id="home">
-            <div id="main2">
-                <i id="slogan">Life happens.<br>Coffee and donuts help.</i>
+        <section id="hero">
+            <div id="hero-content">
+                <i id="hero-tagline">Life happens.<br>web application/stitch/projects/3281450645043133147/screens/823d82d414db4fa3a72bba311cf27290Coffee and donuts help.</i>
+                <i id="hero-tagline">Life happens.<br>web application/stitch/projects/3281450645043133147/screens/823d82d414db4fa3a72bba311cf27290Coffee and donuts help.</i>
                 <p>We hand-craft our donuts every morning using fresh, locally sourced ingredients. <br>Pair your
                     favorite
                     flavor with our signature house-blend espresso.</p>
-                <div id="two_buttons">
-                    <div class="hero_button" id="inner_button">
-                        <a href="#menu" id="search_menu">
+                <div id="hero-buttons">
+                    <div class="cta-wrapper hero-btn-primary">
+                        <a href="#menu" class="cta-link">
                             Order Now
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#fff"
                                 viewBox="0 0 24 24">
@@ -105,9 +106,9 @@
                                 <path d="M17 16V7H8v2h5.59l-6.3 6.29 1.42 1.42 6.29-6.3V16z"></path>
                             </svg> </a>
                     </div>
-                    <div id="inner_button" class="hero_btn">
-                        <a href="#menu" id="search_menu" style="background-color: transparent; border: 2px solid black">
-                            <spam id="hero_span">
+                    <div class="cta-wrapper hero-btn-secondary">
+                        <a href="#menu" class="cta-link" style="background-color: transparent; border: 2px solid black">
+                            <spam id="hero-menu-text">
                                 View Menu
                             </spam>
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#0a0a0a"
@@ -120,18 +121,18 @@
                 </div>
             </div>
 
-            <div id="main1">
+            <div id="hero-image">
                 <img src="../assets/hero_image-removebg-preview.png" alt="hero_image">
             </div>
         </section>
         <section id="about">
-            <div id="about_middle1">
+            <div id="about-image">
 
             </div>
-            <div id="about_middle2">
-                <div id="about_inner1">
+            <div id="about-details">
+                <div id="about-intro">
                     <h1>We Invite You To Visit Our
-                        <br><i id="italic">Cozy Donut Cafe</i>
+                        <br><i id="about-highlight">Cozy Donut Cafe</i>
                     </h1>
                     <p>From warm, glaze-dripping classics to artisan gourmet creations, every treat at Conuts is
                         built
@@ -141,16 +142,17 @@
                         Walk
                         in, grab a coffee, and let our flavors do the talking.</p>
                 </div>
-                <div id="about_inner2">
+                <div id="about-feature-1">
                     <strong>🍩 Hand-Crafted DailyBaked</strong>
-                    <p class="line_height">fresh every morning with signature glazes and premium toppings.</p>
+                    <p class="text-relaxed">fresh every morning with signature glazes and premium toppings.</p>
                 </div>
-                <div id="about_inner3">
+                <div id="about-feature-2">
                     <strong>☕ Perfectly Paired Brews</strong>
-                    <p id="quality_1">Locally roasted coffee beans brewed precisely to match your favorite treat.</p>
+                    <p id="about-quality-text">Locally roasted coffee beans brewed precisely to match your favorite
+                        treat.</p>
                 </div>
-                <div id="inner_button">
-                    <a href="#menu" id="search_menu">
+                <div class="cta-wrapper">
+                    <a href="#menu" class="cta-link">
                         Explore Our Menu
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#fff" viewBox="0 0 24 24">
                             <!--Boxicons v3.0.8 https://boxicons.com | License  https://docs.boxicons.com/free-->

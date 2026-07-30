@@ -50,7 +50,7 @@ body {
   overflow-x: hidden;
 }
 
-#home {
+#hero {
   width: 100%;
   height: 100vh;
   background-clip: border-box;
@@ -58,21 +58,21 @@ body {
   justify-content: space-evenly;
   align-items: center;
 }
-#main1 {
+#hero-image {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 550px;
   height: 550px;
   margin-top: 10px;
-  background: var(--primary);
+  background: var(--dark);
   border-radius: 50%;
   box-shadow: 0 0 35px rgba(216, 155, 45, 0.35);
 }
-#main1 img {
+#hero-image img {
   width: 90%;
   animation: float 3s ease-in-out infinite;
-  filter: drop-shadow(0 20px 30px rgba(0, 0, 0, 0.15));
+  /* filter: drop-shadow(0 20px 30px rgba(0, 0, 0, 0.15)); */
 }
 @keyframes float {
   0% {
@@ -87,35 +87,37 @@ body {
     transform: translateY(0);
   }
 }
-#logo {
-  width: 150px;
+#site-logo {
+  width: 170px;
+  margin: 0;
+  padding: 0 40px;
 }
-#cart {
+#nav-actions {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 20px;
 }
-#main2 p {
+#hero-content p {
   max-width: 600px;
   color: var(--text);
   line-height: 1.8;
 }
-#main2 {
+#hero-content {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
   margin-left: 50px;
 }
-#slogan {
+#hero-tagline {
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
   font-size: 50px;
   /* line-height: 1.4; */
   color: var(--secondary);
   font-weight: bold;
 }
-#slogan::first-line {
+#hero-tagline::first-line {
   color: var(--heading);
 }
 
@@ -134,7 +136,7 @@ address {
   padding: 10px;
   color: var(--white);
 }
-.contact-row {
+.header-contact-item {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
@@ -142,10 +144,10 @@ address {
   gap: 10px;
   margin-right: 20px;
 }
-.row {
+.header-contact-first {
   margin-left: 65px;
 }
-.contact-text {
+.header-contact-text {
   font-size: 13px;
 }
 nav {
@@ -158,13 +160,7 @@ nav {
   background-color: var(--surface);
 }
 
-#logo {
-  margin: 0;
-  padding: 0 40px;
-  width: 170px;
-}
-
-#navbar {
+#main-nav {
   display: flex;
   flex-direction: row;
   justify-content: space-between;

@@ -1,0 +1,6 @@
+{
+  "rules": {
+    "value-keyword-case": "lower",
+    "no-duplicate-selectors": true
+  }
+}
