@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Lucky Shrub</title>
+
+    <meta name="description"
+        content="Discover the story behind Lucky Shrub, a Tucson-based garden design and landscaping company founded by Jason and Maria. Learn about our passion for creating beautiful outdoor spaces.">
+
+    <meta name="keywords"
+        content="Lucky Shrub, Our Story, Garden Design, Landscaping, Plant Nursery, Tucson Arizona, Sustainable Gardening, Outdoor Plants">
+
+    <meta name="author" content="Lucky Shrub">
+
+    <meta name="robots" content="index, follow">
+
+    <meta name="theme-color" content="#4ecdc4">
+    <link href="../CSS/home.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header id="header-logo">
+        <img src="../Asset 1@3x.png" alt="logo" id="logo">
+    </header>
+    <nav>
+        <ul id="nav-links">
+            <li>
+                <a href="index.html">Home</a>
+            </li>
+            <li>
+                <a href="our_story.html">Our Story</a>
+            </li>
+        </ul>
+    </nav>
+    <main>
+        <article>
+            <div class="card-outer">
+                <h3>Custom Garden Design</h3>
+                <p>Transform your outdoor space into a beautiful, functional retreat. Our experienced designers create
+                    personalized gardens that complement your home, lifestyle, and the natural environment.</p>
+            </div>
+            <div class="card-inner">
+                <h5>Highlights:</h5><br>
+                <ul>
+                    <li>Tailored landscape plans</li>
+                    <li>Sustainable plant selection</li>
+                    <li>Modern and traditional garden styles</li>
+                    <li>3D design consultations available</li>
+                </ul>
+            </div>
+        </article>
+        <article>
+            <div class="card-outer">
+                <h3>Landscaping & Care</h3>
+                <p>From the first shovel to ongoing maintenance, we keep your garden healthy and thriving throughout
+                    every
+                    season. Our team ensures your outdoor space always looks its best.</p>
+            </div>
+            <div class="card-inner">
+                <h5>Services include:</h5><br>
+                <ul>
+                    <li>Lawn and garden maintenance</li>
+                    <li>Irrigation installation</li>
+                    <li>Seasonal pruning and planting</li>
+                    <li>Pest and weed management</li>
+                </ul>
+            </div>
+        </article>
+        <article>
+            <div class="card-outer">
+                <h3>Visit Our Nursery</h3>
+                <p>Explore our carefully selected collection of indoor and outdoor plants, gardening supplies, and
+                    decorative pots. Whether you're a beginner or an experienced gardener, we'll help you find the
+                    perfect
+                    plants for your space.</p>
+            </div>
+            <div class="card-inner">
+                <h5>What you'll find:</h5><br>
+                <ul>
+                    <li>Indoor plants</li>
+                    <li>Outdoor shrubs and flowers</li>
+                    <li>Decorative pots and planters</li>
+                    <li>Expert gardening advice</li>
+                </ul>
+            </div>
+        </article>
+    </main>
+    <footer>
+        <img src="../Asset 1@3x.png" alt="logo" id="logo">
+        <p>&copy; 2026 Lucky Shrub. All rights reserved.</p>
+        <p>Designed with 🌿 for nature lovers.</p>
+    </footer>
+    <script>
+        const currentPage = window.location.pathname.split("/").pop();
+
+        document.querySelectorAll("#nav-links a").forEach(link => {
+            if (link.getAttribute("href") === currentPage) {
+                link.classList.add("active");
+            }
+        });
+    </script>
+</body>
+
+</html>

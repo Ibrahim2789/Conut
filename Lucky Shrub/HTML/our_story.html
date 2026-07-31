@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lucky Shrub | Our Story</title>
+
+    <link href="../CSS/our_story.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <img src="../Asset 1@3x.png" alt="Lucky Shrub Logo" id="logo">
+    </header>
+    <nav>
+        <ul id="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="our_story.html">Our Story</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Our Story</h1>
+                <p>
+                    Every thriving garden begins with a dream.
+                    Ours started with a passion for plants and a vision
+                    to transform ordinary spaces into extraordinary landscapes.
+                </p>
+            </div>
+        </section>
+        <section class="journey">
+            <div class="journey-image">
+                <img src="../garden.jpg" alt="Beautiful Garden">
+            </div>
+            <div class="journey-text">
+                <h2>How It All Began</h2>
+                <p>
+                    Lucky Shrub was founded in Tucson, Arizona, by husband-and-wife
+                    team Jason and Maria. United by their lifelong love for plants,
+                    they dreamed of creating a business that would help people
+                    reconnect with nature through thoughtful garden design.
+                </p>
+                <p>
+                    What started as a small landscaping business has grown into a
+                    trusted garden design firm and plant nursery. Today, Lucky
+                    Shrub offers complete landscaping solutions, expert maintenance,
+                    and a carefully curated collection of indoor and outdoor plants.
+                </p>
+            </div>
+        </section>
+        <section class="founders">
+            <h2>Meet the Founders</h2>
+            <div class="founder-cards">
+                <article class="founder-card">
+                    <h3>Jason</h3>
+                    <h4>Garden Architect</h4>
+                    <p>
+                        Jason designs every landscape with creativity and purpose.
+                        From the first sketch to the final planting, he ensures
+                        each project reflects beauty, functionality, and harmony
+                        with nature.
+                    </p>
+                </article>
+                <article class="founder-card">
+                    <h3>Maria</h3>
+                    <h4>Marketing & Nursery Manager</h4>
+                    <p>
+                        Maria oversees the nursery and customer experience while
+                        leading the company's marketing efforts. She helps clients
+                        discover the perfect plants to create vibrant, lasting
+                        gardens.
+                    </p>
+                </article>
+            </div>
+        </section>
+        <section class="values">
+            <h2>Our Values</h2>
+            <div class="value-grid">
+                <article class="value-card">
+                    <h3>Sustainability</h3>
+                    <p>
+                        We believe every landscape should respect and protect the
+                        environment.
+                    </p>
+                </article>
+                <article class="value-card">
+                    <h3>Creativity</h3>
+                    <p>
+                        Every project is designed to reflect the personality of
+                        the people who enjoy it.
+                    </p>
+                </article>
+                <article class="value-card">
+                    <h3>Community</h3>
+                    <p>
+                        We love helping families and businesses create greener,
+                        healthier outdoor spaces.
+                    </p>
+                </article>
+                <article class="value-card">
+                    <h3>Quality</h3>
+                    <p>
+                        From premium plants to expert craftsmanship, quality is
+                        at the heart of everything we do.
+                    </p>
+                </article>
+            </div>
+        </section>
+        <section class="quote">
+            <blockquote>
+                "We don't just grow plants—we cultivate places where memories bloom."
+            </blockquote>
+        </section>
+    </main>
+    <footer>
+        <img src="../Asset 1@3x.png" alt="Lucky Shrub Logo" id="logo">
+        <p>&copy; 2026 Lucky Shrub. All rights reserved.</p>
+        <p>Designed with 🌿 for nature lovers.</p>
+    </footer>
+    <script>
+        const currentPage = window.location.pathname.split("/").pop();
+
+        document.querySelectorAll("#nav-links a").forEach(link => {
+            if (link.getAttribute("href") === currentPage) {
+                link.classList.add("active");
+            }
+        });
+    </script>
+
+</body>
+
+</html>

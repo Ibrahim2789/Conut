@@ -59,13 +59,13 @@ nav {
 
 #nav-links a:hover {
   color: var(--primary-second);
-  border-bottom: 3px solid var(--primary-second);
+  border-bottom: 3px solid var(--secondary);
 }
 
 #nav-links a.active {
   color: var(--primary-second);
   font-weight: bold;
-  border-bottom: 3px solid var(--primary-second);
+  border-bottom: 3px solid var(--secondary);
 }
 
 button {
