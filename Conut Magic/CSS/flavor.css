@@ -10,6 +10,44 @@
   --tertiary: #4ecdc4;
   --neutral: #fff9ec;
 }
+.flex {
+  display: flex;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.flex-around {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.flex-start {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.flex-end {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
 
 html,
 body {
@@ -29,10 +67,10 @@ h1 {
   font-family: "Plus Jakarta Sans", sans-serif;
   font-size: 45px;
 }
+h3 {
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
 nav {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
   padding-top: 7px;
   padding-left: 35px;
 }
@@ -78,10 +116,7 @@ button {
   box-shadow: 5px 5px 0px black;
   background-color: var(--primary-second);
 }
-#landing-page {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+#landing-page1 {
   margin: 120px;
 }
 #heading {
@@ -110,19 +145,13 @@ button {
   text-align: center;
 }
 #btn-box {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
   gap: 20px;
 }
 #landing-btn1 {
-  display: flex;
   background-color: var(--primary);
   color: black;
   width: 120px;
   height: 100px;
-  justify-content: center;
-  align-items: center;
   gap: 4px;
 }
 #landing-btn2 {
@@ -162,4 +191,47 @@ button {
   justify-content: flex-start;
   position: relative;
   top: -100px;
+}
+#landing2-1 {
+  margin: 0 6rem;
+  padding: 2rem;
+}
+#landing2-pre2 {
+  background-color: #f6f0e3;
+  color: var(--primary-second);
+  width: 10rem;
+  box-shadow: none;
+  border: none;
+  gap: 0.8rem;
+}
+
+#landing-page2 {
+  background-color: #f6f0e3;
+  width: 100%;
+  height: 100vh;
+}
+#post1-pre1 {
+  min-width: 100%;
+}
+#landing2-post1 {
+  background-color: var(--primary);
+  max-width: 25rem;
+  height: 20rem;
+  align-items: flex-start;
+  gap: 10%;
+  padding: 2rem;
+  border-radius: 3rem;
+  transition: transform 0.3s ease;
+}
+#landing2-post1:hover {
+  transform: rotate(2deg);
+}
+#landing2-img {
+  max-width: 80%;
+  box-shadow: 0 0 5px #949085;
+  border-radius: 1rem;
+  transition: transform 0.3s ease;
+}
+#landing2-post1:hover #landing2-img {
+  transform: scale(1.2);
 }
