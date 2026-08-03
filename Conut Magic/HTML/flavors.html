@@ -1,5 +1,19 @@
 <!DOCTYPE html>
+<!-- 
+  Conuts Magic - Flavors Page
+  A whimsical donut shop landing page featuring:
+    1. Hero Section      - Main banner with headline, CTA buttons, and floating donut image
+    2. Garden Section    - Flavor Garden showcase with bestseller and flavor cards
+    3. Menu Section      - Full enchanted menu grid with donut items
+    4. Reserve Section   - Table reservation form
+    5. Footer            - Site footer with links and social icons
+  
+  Fonts: Plus Jakarta Sans, Quicksand, Nabla (Google Fonts)
+  Icons: Boxicons v3.0.8
+-->
 <html lang="en">
+
+<!-- ======================== HEAD: Meta, Fonts & Stylesheet ======================== -->
 
 <head>
     <meta charset="UTF-8">
@@ -19,17 +33,20 @@
 </head>
 
 <body>
+    <!-- ======================== HEADER: Fixed Navigation Bar ======================== -->
+    <!-- Contains: Logo, nav links (smooth-scroll anchors), and "Magic Box" CTA button -->
     <header>
         <nav id="navbar" class="flex-around lazy-reveal">
             <div id="navbar-logo">
                 Conuts Magic
             </div>
+            <!-- Navigation Links - each links to a section via smooth scroll -->
             <ul id="nav-links">
                 <li>
-                    <a href="#landing-page1">Flavors</a>
+                    <a href="#hero-section">Flavors</a>
                 </li>
                 <li>
-                    <a href="#landing-page2">Garden</a>
+                    <a href="#garden-section">Garden</a>
                 </li>
                 <li>
                     <a href="#menu">Menu</a>
@@ -42,31 +59,40 @@
         </nav>
     </header>
     <main>
-        <section id="landing-page1" class="flex-between lazy-reveal">
-            <div id="heading" class="lazy-reveal">
-                <div id="new-flavors">
-                    <p id="new-flavors-pragh">NEW FLAVORS INSIDE!</p>
+        <!-- ======================== SECTION 1: Hero Section ======================== -->
+        <!-- The main landing area visitors see first.
+             Left side: "New Flavors" badge, headline, description, and two CTA buttons.
+             Right side: Circular image wrapper with floating heart & star icons. -->
+        <section id="hero-section" class="flex-between lazy-reveal">
+            <!-- Hero Left: Text content -->
+            <div id="hero-content" class="lazy-reveal">
+                <!-- Rotated yellow badge announcing new flavors -->
+                <div id="new-flavors-badge">
+                    <p id="new-flavors-text">NEW FLAVORS INSIDE!</p>
                 </div>
-                <h1>Sprinkling <span id="joy">Joy</span>,<br>
+                <h1>Sprinkling <span id="highlight-joy">Joy</span>,<br>
                     One Magic Bite at a <br>
                     Time!</h1>
-                <p id="landing-pragh">
+                <p id="hero-description">
                     Whimsical creations baked with pure pixie dust and high-<br>grade happiness. Discover the magic that
                     melts in your <br>mouth and warms your soul.
                 </p>
-                <div id="btn-box" class="flex-start">
-                    <button id="landing-btn1" class="flex-center">Shop Magic<svg xmlns="http://www.w3.org/2000/svg"
+                <!-- CTA Buttons: "Shop Magic" (pink) and "View Menu" (neutral) -->
+                <div id="hero-buttons" class="flex-start">
+                    <button id="shop-magic-btn" class="flex-center">Shop Magic<svg xmlns="http://www.w3.org/2000/svg"
                             width="16" height="16" fill="currentColor" viewBox="0 0 24 24">
                             <!--Boxicons v3.0.8 https://boxicons.com | License  https://docs.boxicons.com/free-->
                             <path
                                 d="m10.5 5 1-.67 1 .67-.33-1.17.83-.71L12 3l-.5-1-.5 1-1 .12.83.71zm9.83 8.67L19.5 12l-.83 1.67-1.67.21 1.39 1.18-.56 1.94 1.67-1.11L21.17 17l-.56-1.94L22 13.88zM4.83 9 6.5 7.89 8.17 9l-.56-1.95L9 5.88l-1.67-.21L6.5 4l-.83 1.67L4 5.88l1.39 1.17zm13.88-6.71a.996.996 0 0 0-1.41 0l-15.01 15a.996.996 0 0 0 0 1.41l3 3c.2.2.45.29.71.29s.51-.1.71-.29l15-15a.996.996 0 0 0 0-1.41zM6 19.59 4.41 18l9.09-9.09 1.59 1.59zm10.5-10.5L14.91 7.5 18 4.41 19.59 6z">
                             </path>
                         </svg></button>
-                    <button id="landing-btn2">View Menu</button>
+                    <button id="view-menu-btn">View Menu</button>
                 </div>
             </div>
 
-            <div id="landing-img" class="lazy-reveal">
+            <!-- Hero Right: Circular donut image with floating decorative icons -->
+            <div id="hero-image-wrapper" class="lazy-reveal">
+                <!-- Floating heart icon (bottom-left of image) -->
                 <div class="floating-icon heart"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                         fill="#811d57" viewBox="0 0 24 24">
                         <!--Boxicons v3.0.8 https://boxicons.com | License  https://docs.boxicons.com/free-->
@@ -76,8 +102,9 @@
                     </svg>
                 </div>
                 <div>
-                    <img src="screen.png" alt="landing-photo" id="landing-photo">
+                    <img src="screen.png" alt="hero-donut" id="hero-donut-image">
                 </div>
+                <!-- Floating star icon (top-right of image) -->
                 <div class="floating-icon star">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                         class="bi bi-star" viewBox="0 0 16 16">
@@ -87,15 +114,25 @@
                 </div>
             </div>
         </section>
-        <section id="landing-page2" class="lazy-reveal">
-            <div class="flex-between" id="landing2-1">
-                <div class="flex-column" id="landing2-pre1">
+
+
+
+
+        <!-- ======================== SECTION 2: Flavor Garden ======================== -->
+        <!-- Showcases featured flavors in a card-based layout.
+             Top: Section title + "Browse all 42 flavors" button.
+             Bottom: Bestseller card (Pinky Promise) + right column with
+                     small cards (Glaze Maze, Sky Dust) and feature card (Choco Loco). -->
+        <section id="garden-section" class="lazy-reveal">
+            <!-- Garden Header: Title + Browse button -->
+            <div class="flex-between" id="garden-header">
+                <div class="flex-column" id="garden-title-wrapper">
                     <h1>The Flavor Garden</h1>
                     <p>Every Conut is a unique masterpiece, handcrafted to transport you <br>to a world of pure
                         imagination.
                     </p>
                 </div>
-                <button class="flex-around" id="landing2-pre2">
+                <button class="flex-around" id="browse-flavors-btn">
                     Browse all 42 flavors<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                         fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
                         <path fill-rule="evenodd"
@@ -103,10 +140,12 @@
                     </svg>
                 </button>
             </div>
-            <div class="flex-center lazy-reveal" id="landing2-2">
-                <div class="flex-column" id="landing2-post1">
-                    <div class="flex-between" id="post1-pre1">
-                        <p id="best-seller">BEST SELLER</p>
+            <!-- Garden Cards Container -->
+            <div class="flex-center lazy-reveal" id="garden-cards">
+                <!-- Bestseller Card: Pinky Promise (large pink card on the left) -->
+                <div class="flex-column" id="bestseller-card">
+                    <div class="flex-between" id="bestseller-badge-row">
+                        <p id="bestseller-badge">BEST SELLER</p>
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                             class="bi bi-stars" viewBox="0 0 16 16">
                             <path
@@ -114,54 +153,59 @@
                         </svg>
                     </div>
                     <div class="flex-center">
-                        <img src="pinky_promise.png" alt="donut" id="landing2-img" loading="lazy">
+                        <img src="pinky_promise.png" alt="donut" id="bestseller-donut-image" loading="lazy">
                     </div>
                     <div class="flex-column">
                         <h3>Pinky Promise</h3>
                         <p>Double-strawberry glaze with a heart of marshmallow fluff.</p>
                     </div>
                 </div>
-                <div class="flex-column" id="landing2-post2">
-                    <div class="flex-center" id="landing2-post2-1">
-                        <div class="flex-column" id="landing-post2-pre1">
+                <!-- Right Column: Small flavor cards + Choco Loco feature card -->
+                <div class="flex-column" id="garden-right-column">
+                    <!-- Top Row: Two small flavor cards side by side -->
+                    <div class="flex-center" id="small-cards-row">
+                        <!-- Glaze Maze Card (teal background) -->
+                        <div class="flex-column" id="glaze-maze-card">
                             <div class="flex-center">
                                 <img src="glaze_maze.png" alt="donut" id="donut1" loading="lazy">
                             </div>
-                            <div class="flex-column" id="post2-pre1-outer1">
+                            <div class="flex-column" id="glaze-maze-info">
                                 <div>
                                     <h3>Glaze Maze</h3>
                                 </div>
-                                <div class="flex-start" id="post2-pre1-inner1">
-                                    <div class="flex-center" id="p-1">Citrus</div>
-                                    <div class="flex-center" id="p-1">Tangy</div>
+                                <div class="flex-start" id="glaze-maze-tags">
+                                    <div class="flex-center" id="flavor-tag">Citrus</div>
+                                    <div class="flex-center" id="flavor-tag">Tangy</div>
                                 </div>
                             </div>
                         </div>
-                        <div class="flex-column" id="landing-post2-pre1" style="background-color: #ffd93d;">
+                        <!-- Sky Dust Card (yellow background override) -->
+                        <div class="flex-column" id="sky-dust-card" style="background-color: #ffd93d;">
                             <div class="flex-center">
                                 <img src="skydust.png" alt="donut" id="donut1" loading="lazy">
                             </div>
-                            <div class="flex-column" id="post2-pre1-outer2">
+                            <div class="flex-column" id="sky-dust-info">
                                 <div>
                                     <h3>Sky Dust</h3>
                                 </div>
-                                <div class="flex-start" id="post2-pre1-inner2">
-                                    <div class="flex-center" id="p-1">Grape</div>
-                                    <div class="flex-center" id="p-1">Sparkle</div>
+                                <div class="flex-start" id="sky-dust-tags">
+                                    <div class="flex-center" id="flavor-tag">Grape</div>
+                                    <div class="flex-center" id="flavor-tag">Sparkle</div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div id="landing-post2-pre2" class="flex-center">
+                    <!-- Choco Loco Feature Card (wide, bottom of right column) -->
+                    <div id="choco-loco-card" class="flex-center">
                         <div>
                             <img src="choco_loco.png" alt="donut" id="donut1" loading="lazy">
                         </div>
-                        <div class="flex-column" id="post2-pre2-inner1">
+                        <div class="flex-column" id="choco-loco-info">
                             <div class="flex-column">
                                 <h3>Choco Loco</h3>
                                 <p>Three types of magic chocolate in one bite.</p>
                             </div>
-                            <button class="flex-around" id="landing2-pre2">
+                            <button class="flex-around" id="order-now-btn">
                                 Order Now<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                                     fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
                                     <path fill-rule="evenodd"
@@ -172,6 +216,13 @@
                     </div>
                 </div>
         </section>
+
+
+
+        <!-- ======================== SECTION 3: Full Enchanted Menu ======================== -->
+        <!-- Displays the complete donut menu in a 2-column grid.
+             Contains: Section heading banner, description, category labels
+             (Glazed Greats & Filled Fantasies), and 4 menu item cards. -->
         <section id="menu" class="lazy-reveal">
             <div class="flex-evenly" id="menu-heading">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
@@ -186,7 +237,9 @@
                 <p>From the classic delights of our Glazed Greats to the mysterious wonders of <br>our Filled Fantasies,
                     every bite is a spell waiting to be cast.</p>
             </div>
+            <!-- Menu Items Grid: 2 columns, category headings + donut cards -->
             <div id="menu-items">
+                <!-- Category 1 Heading: Glazed Greats -->
                 <div class="flex-start-end" id="item-heading1">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#811d57" viewBox="0 0 24 24">
                         <!--Boxicons v3.0.8 https://boxicons.com | License  https://docs.boxicons.com/free-->
@@ -196,6 +249,7 @@
                     </svg>
                     <h3>Glazed Greats</h3>
                 </div>
+                <!-- Category 2 Heading: Filled Fantasies -->
                 <div class="flex-start-end" id="item-heading2">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#4ecdc4" viewBox="0 0 24 24">
                         <!--Boxicons v3.0.8 https://boxicons.com | License  https://docs.boxicons.com/free-->
@@ -205,6 +259,7 @@
                     </svg>
                     <h3>Filled Fantasies</h3>
                 </div>
+                <!-- Menu Card 1: Choco Loco - $4.50 -->
                 <div id="item1" class="flex-center menu-card">
                     <div class="flex-center lazy-reveal">
                         <img src="choco_loco.png" alt="donut" id="donut1" loading="lazy">
@@ -227,6 +282,7 @@
                         </button>
                     </div>
                 </div>
+                <!-- Menu Card 2: Custard Cloud - $5.00 (teal background) -->
                 <div id="item2" class="flex-center menu-card">
                     <div class="flex-center lazy-reveal">
                         <img src="custard_cloud.png" alt="donut" id="donut1" loading="lazy">
@@ -249,6 +305,7 @@
                         </button>
                     </div>
                 </div>
+                <!-- Menu Card 3: Blueberry Blitz - $4.25 -->
                 <div id="item3" class="flex-center menu-card">
                     <div class="flex-center lazy-reveal">
                         <img src="blueberry_blitz.png" alt="donut" id="donut1" loading="lazy">
@@ -271,6 +328,7 @@
                         </button>
                     </div>
                 </div>
+                <!-- Menu Card 4: Jammin' Heart - $4.75 -->
                 <div id="item4" class="flex-center menu-card">
                     <div class="flex-center lazy-reveal">
                         <img src="jammin'_heart.png" alt="donut" id="donut1" loading="lazy">
@@ -294,8 +352,18 @@
                 </div>
             </div>
         </section>
+
+
+
+
+
+        <!-- ======================== SECTION 4: Reserve a Magic Spot ======================== -->
+        <!-- Table reservation section with a two-column layout:
+             Left: Heading, description, and two info cards (Celebrate & Instant Confirmation).
+             Right: Reservation form (name, party size, time slot, occasion, submit button). -->
         <section id="reserve" class="lazy-reveal">
             <div class="flex-center lazy-reveal" id="reserve-full-card">
+                <!-- Reserve Left: Info & feature highlights -->
                 <div class="flex-column reserve-left-card lazy-reveal">
                     <div class="flex-column lazy-reveal" id="left-card-inner1">
                         <h1>Reserve a Magic Spot</h1>
@@ -305,6 +373,7 @@
                             and ensure your sugary <br>destiny.</p>
                     </div>
                     <div class="flex-column lazy-reveal" id="left-card-inner2">
+                        <!-- Info Card: Celebrate with us -->
                         <div class="flex reserve-card lazy-reveal">
                             <div>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#e17979"
@@ -320,6 +389,7 @@
                                 <p>Planning a birthday or just a donut party? Let us know!</p>
                             </div>
                         </div>
+                        <!-- Info Card: Instant Confirmation -->
                         <div class="flex reserve-card lazy-reveal">
                             <div>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#e17979"
@@ -342,11 +412,14 @@
 
 
 
+                <!-- Reserve Right: Reservation Form -->
                 <div class="flex-column lazy-reveal" id="reserve-right-card">
+                    <!-- Input: Name -->
                     <div class="flex-column lazy-reveal input-group" id="right-card-inner1">
                         <label for="name">Name of Magic Seeker:</label>
                         <input type="text" name="name" id="name" placeholder="Your name...">
                     </div>
+                    <!-- Input Row: Party Size (select) + Time Slot (time picker) -->
                     <div class="flex-center lazy-reveal input-group" id="two-inputs">
                         <div>
                             <label for="party-size">Party Size</label><br>
@@ -362,11 +435,13 @@
                             <input type="time" id="Time-Slot" name="Time Slot" placeholder="--:--">
                         </div>
                     </div>
+                    <!-- Input: Special Occasion (textarea) -->
                     <div class="flex-column lazy-reveal input-group">
                         <label for="Special-Occasion" id="Special-Occasion">Special Occasion?</label>
                         <textarea id="Special-Occasion" name="Special-Occasion" cols="40" rows="8"
                             placeholder="Tell us if it is a birthday or an anniversary or just because!"></textarea>
                     </div>
+                    <!-- Submit Button: "Book my table" -->
                     <div class="flex-center lazy-reveal" id="reserve-btn-box">
                         <button id="reserve-btn" class="flex-center lazy-reveal" type="submit">Book my table<svg
                                 xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
@@ -382,6 +457,9 @@
             </div>
         </section>
     </main>
+
+    <!-- ======================== FOOTER ======================== -->
+    <!-- Contains: Brand name + copyright, legal links, and social icon buttons -->
     <footer class="flex-start-end lazy-reveal">
         <div class="flex-around" id="footer">
             <div class="flex-column lazy-reveal" id="footer-left">
@@ -413,9 +491,13 @@
             </div>
         </div>
     </footer>
+    <!-- ======================== SCRIPTS ======================== -->
     <script>
+        // ---- Active Nav Link Highlight on Scroll ----
+        // Uses IntersectionObserver to detect which section is in view
+        // and highlights the corresponding nav link.
         const sections = document.querySelectorAll(
-            "#landing-page1, #landing-page2, #menu, #reserve"
+            "#hero-section, #garden-section, #menu, #reserve"
         );
 
         const navLinks = document.querySelectorAll("#nav-links a");

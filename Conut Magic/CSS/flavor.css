@@ -1,8 +1,27 @@
+/* ================================================================
+   Conuts Magic - Flavors Page Stylesheet
+   
+   Structure:
+     1. Reset & Design Tokens (CSS Variables)
+     2. Utility / Layout Classes (flex helpers)
+     3. Global Element Styles (body, headers, buttons)
+     4. Header & Navigation
+     5. Hero Section (Section 1)
+     6. Animations (float, float1)
+     7. Garden Section (Section 2) - Flavor cards
+     8. Menu Section (Section 3) - Full menu grid
+     9. Lazy Reveal Animations
+    10. Reserve Section (Section 4) - Reservation form
+    11. Footer
+   ================================================================ */
+
+/* ======================== 1. RESET & DESIGN TOKENS ======================== */
 * {
   padding: 0;
   margin: 0;
 }
 
+/* Color palette - used throughout the site via var() */
 :root {
   --primary: #ff85c1;
   --primary-second: #811d57;
@@ -11,6 +30,8 @@
   --neutral: #fff9ec;
 }
 
+/* ======================== 2. UTILITY / LAYOUT CLASSES ======================== */
+/* Reusable flex helpers applied via class names in HTML */
 /* font-family: "Quicksand", sans-serif; */
 .flex {
   display: flex;
@@ -65,21 +86,25 @@
   justify-content: space-evenly;
   align-items: center;
 }
+/* ======================== 3. GLOBAL ELEMENT STYLES ======================== */
 html,
 body {
   background-color: var(--neutral);
   scroll-behavior: smooth;
 }
 
+/* Sticky header fallback (overridden below by fixed positioning) */
 header {
   position: sticky;
 }
 
+/* Horizontal rule styling */
 hr {
   margin-top: 12px;
   padding-top: 5px;
   background-color: #000;
 }
+/* Global heading font */
 h1 {
   font-family: "Plus Jakarta Sans", sans-serif;
   font-size: 45px;
@@ -87,6 +112,8 @@ h1 {
 h3 {
   font-family: "Plus Jakarta Sans", sans-serif;
 }
+/* ======================== 4. HEADER & NAVIGATION ======================== */
+/* Fixed header bar - stays at top on scroll with bottom border */
 header {
   position: fixed;
   width: 100%;
@@ -96,11 +123,13 @@ header {
   z-index: 1000;
   background-color: #e8e2d5;
 }
+/* Nav container padding */
 nav {
   padding-top: 7px;
   padding-left: 35px;
 }
 
+/* Brand logo - large bold text with shadow */
 #navbar-logo {
   color: var(--primary-second);
   font-size: 30px;
@@ -108,11 +137,13 @@ nav {
   font-family: "Plus Jakarta Sans", sans-serif;
   text-shadow: 4px 4px 4px #bfb9ac;
 }
+/* Nav links list - horizontal with gap */
 #nav-links {
   display: flex;
   gap: 20px;
   list-style-type: none;
 }
+/* Nav link base style - muted color with transition */
 #nav-links a {
   text-decoration: none;
   color: #afab9f;
@@ -121,17 +152,20 @@ nav {
   transition: 0.3s;
 }
 
+/* Nav link hover - highlight color + yellow underline */
 #nav-links a:hover {
   color: var(--primary-second);
   border-bottom: 3px solid var(--secondary);
 }
 
+/* Active nav link - bold with yellow underline (set by JS on scroll) */
 #nav-links a.active {
   color: var(--primary-second);
   font-weight: bold;
   border-bottom: 3px solid var(--secondary);
 }
 
+/* Default button style - rounded with retro box-shadow */
 button {
   padding: 9px;
   border-radius: 18px;
@@ -142,22 +176,28 @@ button {
   box-shadow: 5px 5px 0px black;
   background-color: var(--primary-second);
 }
+/* Button press effect - shifts down and reduces shadow */
 button:active {
   transform: translateY(2px);
   box-shadow: 2px 2px 0 black;
 }
-#landing-page1 {
+
+/* ======================== 5. HERO SECTION (Section 1) ======================== */
+/* Main hero area with headline, buttons, and donut image */
+#hero-section {
   margin: 120px;
   margin-top: 100px;
   margin-bottom: 120px;
 }
-#heading {
+/* Hero text content container - vertical layout with gap */
+#hero-content {
   display: flex;
   flex-direction: column;
   justify-content: left;
   gap: 20px;
 }
-#new-flavors {
+/* "NEW FLAVORS INSIDE!" badge - yellow with retro border + shadow, slightly rotated */
+#new-flavors-badge {
   padding: 8px 12px;
   border-radius: 18px;
   width: 180px;
@@ -167,47 +207,55 @@ button:active {
   background-color: var(--secondary);
   rotate: -1.5deg;
 }
-#joy {
+/* Highlighted "Joy" text in the headline */
+#highlight-joy {
   color: var(--primary-second);
   border-bottom: 6px solid var(--secondary);
 }
-#new-flavor-pragh {
+/* Badge inner text styling */
+#new-flavors-text {
   color: #000;
-  font-size: 6px;
+  font-size: 1rem;
   text-align: center;
 }
-#btn-box {
+/* CTA buttons container */
+#hero-buttons {
   gap: 20px;
 }
-#landing-btn1 {
+/* "Shop Magic" button - pink background */
+#shop-magic-btn {
   background-color: var(--primary);
   color: black;
   width: 120px;
-  height: 100px;
+  max-height: 100px;
   gap: 4px;
 }
-#landing-btn2 {
+/* "View Menu" button - neutral/cream background */
+#view-menu-btn {
   background-color: var(--neutral);
   color: black;
 }
-#landing-img {
+/* Circular container for the hero donut image with floating icons */
+#hero-image-wrapper {
   border-radius: 50%;
   border: 4px solid #949085;
   width: 20em;
-  height: 20em;
+  min-height: 20em;
   background-color: #fff0c5;
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
 }
-#landing-photo {
+/* The main donut image inside the hero - floats with animation */
+#hero-donut-image {
   width: 30rem;
-  height: 200px;
+  min-height: 200px;
   border-radius: 20px;
   animation: float 2s ease-in infinite;
 }
-
+/* ======================== 6. ANIMATIONS ======================== */
+/* Float upward animation - used by hero donut image */
 @keyframes float {
   0% {
     transform: translateY(0) roatate(0deg);
@@ -220,6 +268,7 @@ button:active {
   }
 }
 
+/* Float downward animation - used by heart and star icons */
 @keyframes float1 {
   0% {
     transform: translateY(0) rotate(0deg);
@@ -232,16 +281,19 @@ button:active {
   }
 }
 
+/* Floating decorative icons - positioned absolutely within hero-image-wrapper */
 .floating-icon {
   position: absolute;
   animation: float 2s ease-in-out infinite;
 }
 
+/* Heart icon position - bottom-left of hero image */
 .heart {
   left: -100px;
   top: 80%;
 }
 
+/* Star icon position - top-right of hero image */
 .star {
   right: -100px;
   top: 15%;
@@ -254,11 +306,17 @@ button:active {
 .star {
   animation: float1 2s ease infinite;
 }
-#landing2-1 {
+/* ======================== 7. GARDEN SECTION (Section 2) ======================== */
+/* Flavor Garden showcase with bestseller and flavor cards */
+
+/* Garden header row - title on left, browse button on right */
+#garden-header {
   margin: 0 6rem;
   padding: 2rem;
 }
-#landing2-pre2 {
+/* Shared style for "Browse all flavors" and "Order Now" buttons - flat/ghost style */
+#browse-flavors-btn,
+#order-now-btn {
   background-color: #f6f0e3;
   color: var(--primary-second);
   width: 10rem;
@@ -266,17 +324,19 @@ button:active {
   border: none;
   gap: 0.8rem;
 }
-
-#landing-page2 {
+/* Garden section background - full width, min full viewport height */
+#garden-section {
   background-color: #f6f0e3;
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   padding-bottom: 4rem;
 }
-#post1-pre1 {
+/* Bestseller badge row - ensures full width for badge + star icon */
+#bestseller-badge-row {
   min-width: 100%;
 }
-#landing2-post1 {
+/* Bestseller card (Pinky Promise) - large pink card with rounded corners */
+#bestseller-card {
   background-color: var(--primary);
   max-width: 25rem;
   height: 22rem;
@@ -287,19 +347,23 @@ button:active {
   transition: transform 0.3s ease;
   box-shadow: 8px 8px 0px black;
 }
-#landing2-post1:hover {
+/* Bestseller card hover - slight rotation for playful feel */
+#bestseller-card:hover {
   transform: rotate(2deg);
 }
-#landing2-img {
+/* Bestseller donut image - with shadow and hover scale */
+#bestseller-donut-image {
   max-width: 70%;
   box-shadow: 0 0 5px #949085;
   border-radius: 1rem;
   transition: transform 0.3s ease;
 }
-#landing2-post1:hover #landing2-img {
+/* Zoom donut image when hovering the bestseller card */
+#bestseller-card:hover #bestseller-donut-image {
   transform: scale(1.2);
 }
-#best-seller {
+/* "BEST SELLER" badge - bordered pill with retro shadow */
+#bestseller-badge {
   padding: 8px 12px;
   border-radius: 18px;
   width: 30%;
@@ -308,73 +372,92 @@ button:active {
   box-shadow: 6px 6px 0px black;
   background-color: var(--neutral);
 }
-#landing-post2-pre2 {
+/* Choco Loco feature card - wide, neutral bg, bottom of right column */
+#choco-loco-card {
   background-color: var(--neutral);
   width: 35rem;
-  height: 10rem;
+  min-height: 10rem;
   gap: 20px;
   border-radius: 1rem;
   padding: 1rem;
   transition: transform 0.3s ease;
   box-shadow: 8px 8px 0px black;
 }
-#landing2-post2 {
+/* Right column layout - contains small cards row + choco loco */
+#garden-right-column {
   gap: 1rem;
   margin: 1rem;
 }
-#post2-pre2-inner1 {
+/* Choco Loco text and button container - spacing */
+#choco-loco-info {
   gap: 16px;
 }
+/* Shared donut image style for small cards */
 #donut1 {
   max-width: 8rem;
   border-radius: 1rem;
   transition: transform 0.3s ease;
 }
-#landing-post2-pre2:hover {
+/* Choco Loco card hover rotation */
+#choco-loco-card:hover {
   transform: rotate(2deg);
 }
-#landing-post2-pre2:hover #donut1 {
+/* Zoom donut in choco loco card on hover */
+#choco-loco-card:hover #donut1 {
   transform: scale(1.2);
 }
-#landing2-post2-1 {
+/* Row containing Glaze Maze + Sky Dust small cards */
+#small-cards-row {
   gap: 1rem;
 }
-#landing-post2-pre1 {
+/* Small flavor cards (Glaze Maze & Sky Dust) - teal bg, retro shadow */
+#glaze-maze-card,
+#sky-dust-card {
   background-color: var(--tertiary);
   width: 16rem;
-  height: 10rem;
+  min-height: 10rem;
   gap: 15px;
   border-radius: 1rem;
   padding: 1rem;
   transition: transform 0.3s ease;
   box-shadow: 8px 8px 0px black;
 }
-#post2-pre1-inner1 {
+/* Flavor tag rows - gap between tag pills */
+#glaze-maze-tags {
   gap: 0.8rem;
 }
-#post2-pre1-inner2 {
+#sky-dust-tags {
   gap: 0.8rem;
 }
-#p-1 {
+/* Individual flavor tag pill - small rounded label */
+#flavor-tag {
   background-color: #eeece9;
   border-radius: 16px;
   width: 45px;
-  height: 22px;
+  min-height: 22px;
   font-size: 12px;
 }
-#post2-pre1-outer1,
-#post2-pre1-outer2 {
+/* Info wrappers for Glaze Maze and Sky Dust card text */
+#glaze-maze-info,
+#sky-dust-info {
   gap: 0.5rem;
 }
-#landing-post2-pre1:hover {
+/* Small card hover rotation */
+#glaze-maze-card:hover,
+#sky-dust-card:hover {
   transform: rotate(2deg);
 }
-#landing-post2-pre1:hover #donut1 {
+/* Zoom donut in small cards on hover */
+#glaze-maze-card:hover #donut1,
+#sky-dust-card:hover #donut1 {
   transform: scale(1.2);
 }
+
+/* ======================== 8. MENU SECTION (Section 3) ======================== */
+/* Full enchanted menu displayed in a 2-column CSS Grid */
 #menu {
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   margin-top: 4rem;
   display: grid;
   grid-template-rows: auto auto auto;
@@ -387,10 +470,12 @@ button:active {
   background-color: var(--neutral);
   padding-bottom: 2rem;
 }
+/* Menu heading banner - yellow rotated pill with retro shadow */
 #menu-heading {
   grid-area: menu-heading;
-  width: 28rem;
-  height: 4rem;
+  width: 100%;
+  max-width: 28rem;
+  min-height: 4rem;
   border-radius: 24px;
   background-color: var(--secondary);
   box-shadow: 8px 8px 0 black;
@@ -400,12 +485,14 @@ button:active {
   font-size: 1.8rem;
   color: var(--primary-second);
 }
+/* Menu description text */
 #menu-info {
   grid-area: menu-info;
 }
 #menu-info p {
   text-align: center;
 }
+/* Menu items grid - 2 columns for category headings + donut cards */
 #menu-items {
   display: grid;
   grid-area: main-menu;
@@ -415,15 +502,48 @@ button:active {
   justify-items: center;
 }
 
+/* Responsive: Stack menu items in single column on small screens */
+@media (max-width: 768px) {
+  #menu-items {
+    grid-template-columns: 1fr;
+  }
+  .menu-card {
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+  }
+  #reserve {
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+  }
+
+  #reserve-right-card {
+    flex-direction: column;
+  }
+
+  #two-inputs {
+    flex-direction: column;
+  }
+
+  footer,
+  #footer {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+}
+/* Category heading labels (Glazed Greats / Filled Fantasies) */
 #item-heading1,
 #item-heading2 {
   width: 100%;
   gap: 10px;
 }
+/* Menu card base - pink rounded card with retro shadow */
 .menu-card {
   width: 100%;
   max-width: 30rem;
-  height: 6rem;
+  min-height: 6rem;
   background: var(--primary);
   border-radius: 24px;
   box-shadow: 8px 8px 0 black;
@@ -432,11 +552,13 @@ button:active {
   padding: 20px;
   transition: transform 0.3s ease;
 }
+/* Menu card text container */
 .menu-card-info {
   gap: 10px;
   align-items: flex-center;
 }
 
+/* "Order Now" button inside menu cards - transparent/ghost style */
 .menu-card-button {
   background-color: transparent !important;
   color: var(--primary-second);
@@ -449,6 +571,7 @@ button:active {
   color: none;
   box-shadow: none;
 }
+/* Alternate card backgrounds: items 1 & 3 are muted, item 2 is teal */
 #item1,
 #item3 {
   background-color: #dedad0;
@@ -457,6 +580,7 @@ button:active {
 #item2 {
   background-color: var(--tertiary);
 }
+/* Price label color */
 #price {
   color: var(--primary-second);
 }
@@ -475,13 +599,17 @@ button:active {
 #menu-card-btn-3 {
   color: #006a65;
 }
+/* Menu card hover rotation */
 .menu-card:hover {
   transform: rotate(2deg);
 }
+/* Zoom donut in menu card on hover */
 .menu-card:hover #donut1 {
   transform: scale(1.12);
 }
 
+/* ======================== 9. LAZY REVEAL ANIMATIONS ======================== */
+/* Elements with .lazy-reveal start hidden and slide up when scrolled into view */
 /* Lazy reveal animations */
 .lazy-reveal {
   opacity: 0;
@@ -503,16 +631,20 @@ button:active {
     transform 0.5s ease-out;
 }
 
+/* ======================== 10. RESERVE SECTION (Section 4) ======================== */
+/* Table reservation area - yellow background, two-column card layout */
 #reserve {
   background-color: #ffe173;
   width: 100%;
   height: 100vh;
 }
 
+/* Main reservation card container - centered with padding and gap */
 #reserve-full-card {
   padding: 4rem;
   gap: 40px;
 }
+/* Info cards within reservation left side (Celebrate / Instant Confirmation) */
 .reserve-card {
   justify-content: center;
   align-items: center;
@@ -526,11 +658,13 @@ button:active {
   border: 2px solid black;
   box-shadow: 5px 5px 0px black;
 }
+/* Left card sizing */
 .reserve-left-card {
   max-width: 30rem;
   height: 20rem;
   gap: 20px;
 }
+/* Left card inner spacing */
 #left-card-inner1 {
   gap: 10px;
 }
@@ -538,6 +672,7 @@ button:active {
   gap: 20px;
 }
 
+/* Right card - reservation form container */
 #reserve-right-card {
   justify-content: center;
   align-items: flex-start;
@@ -548,7 +683,8 @@ button:active {
   border-radius: 20px;
   padding: 20px;
 }
-
+/* --- Form Input Styles --- */
+/* Text inputs - rounded with border and hover lift */
 input {
   width: 12rem;
   height: 2rem;
@@ -561,6 +697,7 @@ input {
 input:hover {
   transform: translateY(-2px);
 }
+/* Select dropdown base style */
 select {
   width: 10rem;
   height: 3rem;
@@ -569,12 +706,14 @@ select {
   border: 3px solid black;
 }
 
+/* Party size dropdown option styling */
 #party-size option {
   font-family: "Quicksand", sans-serif;
   font-size: 1rem;
   color: #811d57;
   background: #fff9ec;
 }
+/* Party size select - custom styled with native appearance removed */
 #party-size {
   font-family: "Quicksand", sans-serif;
 
@@ -604,6 +743,7 @@ select {
   outline: none;
   border-color: var(--primary-second);
 }
+/* --- Focus States --- remove default outline, add brand color border */
 input:focus {
   outline: none;
   border-color: var(--primary-second);
@@ -628,6 +768,7 @@ textarea:focus {
 #two-inputs {
   gap: 20px;
 }
+/* Textarea for special occasion message */
 textarea {
   width: 24rem;
   height: 8rem;
@@ -646,6 +787,7 @@ textarea {
 .input-group {
   gap: 6px;
 }
+/* "Book my table" submit button - large, full-width with shadow */
 #reserve-btn {
   background-color: var(--primary-second);
   color: white;
@@ -665,6 +807,7 @@ textarea {
   box-shadow: 2px 2px 0 black;
 }
 
+/* Placeholder text styling for all form fields */
 input::placeholder,
 textarea::placeholder,
 select::placeholder {
@@ -673,14 +816,19 @@ select::placeholder {
   font-size: 0.8rem;
 }
 
+/* Reserve info card hover rotation */
 .reserve-card:hover {
   transform: rotate(2deg);
 }
+
+/* ======================== 11. FOOTER ======================== */
+/* Site footer with brand info, legal links, and social buttons */
 footer {
   background-color: --neutral;
   width: 100%;
   height: 13rem;
 }
+/* Footer inner container - yellow bg with top border */
 #footer {
   width: 100%;
   height: 10rem;
@@ -688,17 +836,21 @@ footer {
   background-color: var(--secondary);
   border-top: 4px solid black;
 }
+/* Footer left: brand + copyright */
 #footer-left {
   gap: 10px;
 }
+/* Footer center: legal links */
 #footer-center {
   gap: 20px;
 }
 
+/* Footer right: social icon buttons */
 #footer-right {
   gap: 10px;
 }
 
+/* Social icon button style - circular white with border */
 .links {
   width: 2.5rem;
   height: 2.5rem;
@@ -706,3 +858,9 @@ footer {
   background-color: white;
   border: 2px solid black;
 }
+
+/* @media (max-width: 768px) {
+  #landing2-pre1 {
+    flex-direction: column;
+  }
+} */
