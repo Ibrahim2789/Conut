@@ -20,34 +20,30 @@
 
 <body>
     <header>
-        <nav id="navbar" class="flex-around">
+        <nav id="navbar" class="flex-around lazy-reveal">
             <div id="navbar-logo">
                 Conuts Magic
             </div>
             <ul id="nav-links">
                 <li>
-                    <a href="flavors.html">Flavors</a>
+                    <a href="#landing-page1">Flavors</a>
                 </li>
                 <li>
-                    <a href="#menu">Our Story</a>
+                    <a href="#landing-page2">Garden</a>
                 </li>
                 <li>
-                    <a href="locations.html">Locations</a>
+                    <a href="#menu">Menu</a>
                 </li>
                 <li>
-                    <a href="reserve.html">Reserve</a>
-                </li>
-                <li>
-                    <a href="say_hello.html">Say Hello</a>
+                    <a href="#reserve">Reserve</a>
                 </li>
             </ul>
             <button id="nav-btn" href="../HTML/reserve.html"> Magic Box </button>
         </nav>
     </header>
-    <hr>
     <main>
-        <section id="landing-page1" class="flex-between">
-            <div id="heading">
+        <section id="landing-page1" class="flex-between lazy-reveal">
+            <div id="heading" class="lazy-reveal">
                 <div id="new-flavors">
                     <p id="new-flavors-pragh">NEW FLAVORS INSIDE!</p>
                 </div>
@@ -70,15 +66,28 @@
                 </div>
             </div>
 
-            <div id="landing-img">
-                <div id="heart"><img src="heart.svg"></div>
-                <div>
-                    <img src="Blueberry_blitz.png" alt="landing-photo" id="landing-photo">
+            <div id="landing-img" class="lazy-reveal">
+                <div class="floating-icon heart"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                        fill="#811d57" viewBox="0 0 24 24">
+                        <!--Boxicons v3.0.8 https://boxicons.com | License  https://docs.boxicons.com/free-->
+                        <path
+                            d="M11.29 20.66c.2.2.45.29.71.29s.51-.1.71-.29l7.5-7.5c2.35-2.35 2.35-6.05 0-8.41-2.3-2.28-5.85-2.35-8.21-.2-2.36-2.15-5.91-2.09-8.21.2-2.35 2.36-2.35 6.06 0 8.41zM5.21 6.16C6 5.38 7 4.99 8.01 4.99s2.01.39 2.79 1.17l.5.5c.39.39 1.02.39 1.41 0l.5-.5c1.56-1.56 4.02-1.56 5.59 0 1.56 1.57 1.56 4.02 0 5.58l-6.79 6.79-6.79-6.79a3.91 3.91 0 0 1 0-5.58Z">
+                        </path>
+                    </svg>
                 </div>
-
+                <div>
+                    <img src="screen.png" alt="landing-photo" id="landing-photo">
+                </div>
+                <div class="floating-icon star">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-star" viewBox="0 0 16 16">
+                        <path
+                            d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.56.56 0 0 0-.163-.505L1.71 6.745l4.052-.576a.53.53 0 0 0 .393-.288L8 2.223l1.847 3.658a.53.53 0 0 0 .393.288l4.052.575-2.906 2.77a.56.56 0 0 0-.163.506l.694 3.957-3.686-1.894a.5.5 0 0 0-.461 0z" />
+                    </svg>
+                </div>
             </div>
         </section>
-        <section id="landing-page2">
+        <section id="landing-page2" class="lazy-reveal">
             <div class="flex-between" id="landing2-1">
                 <div class="flex-column" id="landing2-pre1">
                     <h1>The Flavor Garden</h1>
@@ -94,7 +103,7 @@
                     </svg>
                 </button>
             </div>
-            <div class="flex-center" id="landing2-2">
+            <div class="flex-center lazy-reveal" id="landing2-2">
                 <div class="flex-column" id="landing2-post1">
                     <div class="flex-between" id="post1-pre1">
                         <p id="best-seller">BEST SELLER</p>
@@ -105,7 +114,7 @@
                         </svg>
                     </div>
                     <div class="flex-center">
-                        <img src="pinky_promise.png" alt="donut" id="landing2-img">
+                        <img src="pinky_promise.png" alt="donut" id="landing2-img" loading="lazy">
                     </div>
                     <div class="flex-column">
                         <h3>Pinky Promise</h3>
@@ -116,7 +125,7 @@
                     <div class="flex-center" id="landing2-post2-1">
                         <div class="flex-column" id="landing-post2-pre1">
                             <div class="flex-center">
-                                <img src="glaze_maze.png" alt="donut" id="donut1">
+                                <img src="glaze_maze.png" alt="donut" id="donut1" loading="lazy">
                             </div>
                             <div class="flex-column" id="post2-pre1-outer1">
                                 <div>
@@ -130,7 +139,7 @@
                         </div>
                         <div class="flex-column" id="landing-post2-pre1" style="background-color: #ffd93d;">
                             <div class="flex-center">
-                                <img src="skydust.png" alt="donut" id="donut1">
+                                <img src="skydust.png" alt="donut" id="donut1" loading="lazy">
                             </div>
                             <div class="flex-column" id="post2-pre1-outer2">
                                 <div>
@@ -145,7 +154,7 @@
                     </div>
                     <div id="landing-post2-pre2" class="flex-center">
                         <div>
-                            <img src="choco_loco.png" alt="donut" id="donut1">
+                            <img src="choco_loco.png" alt="donut" id="donut1" loading="lazy">
                         </div>
                         <div class="flex-column" id="post2-pre2-inner1">
                             <div class="flex-column">
@@ -163,7 +172,7 @@
                     </div>
                 </div>
         </section>
-        <section id="menu">
+        <section id="menu" class="lazy-reveal">
             <div class="flex-evenly" id="menu-heading">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
                     <!--Boxicons v3.0.8 https://boxicons.com | License  https://docs.boxicons.com/free-->
@@ -197,19 +206,19 @@
                     <h3>Filled Fantasies</h3>
                 </div>
                 <div id="item1" class="flex-center menu-card">
-                    <div class="flex-center">
-                        <img src="choco_loco.png" alt="donut" id="donut1">
+                    <div class="flex-center lazy-reveal">
+                        <img src="choco_loco.png" alt="donut" id="donut1" loading="lazy">
                     </div>
-                    <div class="flex-column menu-card-info">
-                        <div class="flex-between">
+                    <div class="flex-column menu-card-info lazy-reveal">
+                        <div class="flex-between lazy-reveal">
                             <h3>Choco Loco</h3>
                             <span id="price">$4.50</span>
                         </div>
-                        <div class="flex-start">
+                        <div class="flex-start lazy-reveal">
                             <p>Triple chocolate explosion with a neon sprinkle fiesta. It's a sugar rush in every bite!
                             </p>
                         </div>
-                        <button class="flex-around menu-card-button">
+                        <button class="flex-around menu-card-button lazy-reveal">
                             Order Now<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                 class="bi bi-arrow-right" viewBox="0 0 16 16">
                                 <path fill-rule="evenodd"
@@ -219,19 +228,19 @@
                     </div>
                 </div>
                 <div id="item2" class="flex-center menu-card">
-                    <div class="flex-center">
-                        <img src="custard_cloud.png" alt="donut" id="donut1">
+                    <div class="flex-center lazy-reveal">
+                        <img src="custard_cloud.png" alt="donut" id="donut1" loading="lazy">
                     </div>
-                    <div class="flex-column menu-card-info">
-                        <div class="flex-between">
+                    <div class="flex-column menu-card-info lazy-reveal">
+                        <div class="flex-between lazy-reveal">
                             <h3>Custard Cloud</h3>
                             <span id="price">$5.00</span>
                         </div>
-                        <div class="flex-start">
+                        <div class="flex-start lazy-reveal">
                             <p>Filled with airy vanilla bean custard and topped with a glass-crisp caramel lid.
                             </p>
                         </div>
-                        <button class="flex-around menu-card-button" id="menu-card-btn-3">
+                        <button class="flex-around menu-card-button lazy-reveal" id="menu-card-btn-3">
                             Order Now<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                 class="bi bi-arrow-right" viewBox="0 0 16 16">
                                 <path fill-rule="evenodd"
@@ -241,19 +250,19 @@
                     </div>
                 </div>
                 <div id="item3" class="flex-center menu-card">
-                    <div class="flex-center">
-                        <img src="blueberry_blitz.png" alt="donut" id="donut1">
+                    <div class="flex-center lazy-reveal">
+                        <img src="blueberry_blitz.png" alt="donut" id="donut1" loading="lazy">
                     </div>
-                    <div class="flex-column menu-card-info">
-                        <div class="flex-between">
+                    <div class="flex-column menu-card-info lazy-reveal">
+                        <div class="flex-between lazy-reveal">
                             <h3>Blueberry Blitz</h3>
                             <span id="price">$4.25</span>
                         </div>
-                        <div class="flex-start">
+                        <div class="flex-start lazy-reveal">
                             <p>Real mountain blueberries folded into a shimmering azure glaze.
                             </p>
                         </div>
-                        <button class="flex-around menu-card-button">
+                        <button class="flex-around menu-card-button lazy-reveal">
                             Order Now<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                 class="bi bi-arrow-right" viewBox="0 0 16 16">
                                 <path fill-rule="evenodd"
@@ -263,18 +272,18 @@
                     </div>
                 </div>
                 <div id="item4" class="flex-center menu-card">
-                    <div class="flex-center">
-                        <img src="jammin'_heart.png" alt="donut" id="donut1">
+                    <div class="flex-center lazy-reveal">
+                        <img src="jammin'_heart.png" alt="donut" id="donut1" loading="lazy">
                     </div>
-                    <div class="flex-column menu-card-info">
-                        <div class="flex-between">
+                    <div class="flex-column menu-card-info lazy-reveal">
+                        <div class="flex-between lazy-reveal">
                             <h3>Jammin' Heart</h3>
                             <span id="price">$4.75</span>
                         </div>
-                        <div class="flex-start">
+                        <div class="flex-start lazy-reveal">
                             <p>Bursting with artisan raspberry jam and dusted in snowflake-soft sugar.</p>
                         </div>
-                        <button class="flex-around menu-card-button" id="menu-card-btn-4">
+                        <button class="flex-around menu-card-button lazy-reveal" id="menu-card-btn-4">
                             Order Now<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                 class="bi bi-arrow-right" viewBox="0 0 16 16">
                                 <path fill-rule="evenodd"
@@ -285,19 +294,184 @@
                 </div>
             </div>
         </section>
-    </main>
-    <script>
-        const currentPage = window.location.pathname.split("/").pop();
+        <section id="reserve" class="lazy-reveal">
+            <div class="flex-center lazy-reveal" id="reserve-full-card">
+                <div class="flex-column reserve-left-card lazy-reveal">
+                    <div class="flex-column lazy-reveal" id="left-card-inner1">
+                        <h1>Reserve a Magic Spot</h1>
+                        <p>Don't risk the sadness of an empty donut box! Book your table <br>in the Flavor Garden ahead
+                            of
+                            time
+                            and ensure your sugary <br>destiny.</p>
+                    </div>
+                    <div class="flex-column lazy-reveal" id="left-card-inner2">
+                        <div class="flex reserve-card lazy-reveal">
+                            <div>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#e17979"
+                                    viewBox="0 0 24 24">
+                                    <!--Boxicons v3.0.8 https://boxicons.com | License  https://docs.boxicons.com/free-->
+                                    <path
+                                        d="M4 22h16c.55 0 1-.45 1-1V10c0-1.1-.9-2-2-2h-4V5c0-.81-.32-1.57-.87-2.11-.62-.64-1.49-.96-2.39-.88C10.21 2.14 9 3.51 9 5.12V8H5c-1.1 0-2 .9-2 2v11c0 .55.45 1 1 1m15-2H5v-6h14zM5 10h5c.55 0 1-.45 1-1V5.12c0-.57.41-1.07.91-1.11.3-.02.58.07.8.3.19.18.29.43.29.69v4c0 .55.45 1 1 1h5v2H5z">
+                                    </path>
+                                </svg>
+                            </div>
+                            <div class="flex-column lazy-reveal">
+                                <h5>Celebrate with us</h5>
+                                <p>Planning a birthday or just a donut party? Let us know!</p>
+                            </div>
+                        </div>
+                        <div class="flex reserve-card lazy-reveal">
+                            <div>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#e17979"
+                                    viewBox="0 0 24 24">
+                                    <!--Boxicons v3.0.8 https://boxicons.com | License  https://docs.boxicons.com/free-->
+                                    <path
+                                        d="M21 5H3c-.55 0-1 .45-1 1v3.55c0 .48.33.89.8.98a1.499 1.499 0 0 1 0 2.94c-.47.09-.8.5-.8.98V18c0 .55.45 1 1 1h18c.55 0 1-.45 1-1v-3.55c0-.48-.33-.89-.8-.98a1.499 1.499 0 0 1 0-2.94c.47-.09.8-.5.8-.98V6c0-.55-.45-1-1-1m-1 3.84c-1.2.57-2 1.79-2 3.16s.8 2.59 2 3.16V17h-4v-2h-1v2H4v-1.84c1.2-.57 2-1.79 2-3.16s-.8-2.59-2-3.16V7h11v1h1V7h4z">
+                                    </path>
+                                    <path d="M15 9h1v2h-1zm0 3h1v2h-1z"></path>
+                                </svg>
+                            </div>
+                            <div class="flex-column lazy-reveal">
+                                <h5>Instant Confirmation</h5>
+                                <p>Receive your magic ticket via SMS immediately.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-        document.querySelectorAll("#nav-links a").forEach(link => {
-            if (link.getAttribute("href") === currentPage) {
-                link.classList.add("active");
+
+
+
+                <div class="flex-column lazy-reveal" id="reserve-right-card">
+                    <div class="flex-column lazy-reveal input-group" id="right-card-inner1">
+                        <label for="name">Name of Magic Seeker:</label>
+                        <input type="text" name="name" id="name" placeholder="Your name...">
+                    </div>
+                    <div class="flex-center lazy-reveal input-group" id="two-inputs">
+                        <div>
+                            <label for="party-size">Party Size</label><br>
+                            <select id="party-size" name="party-size">
+                                <option value="2">2 Magic Persons</option>
+                                <option value="4">4 Magic Persons</option>
+                                <option value="6">6 Magic Persons</option>
+                                <option value="8">8 Magic Persons</option>
+                            </select>
+                        </div>
+                        <div class="lazy-reveal input-group">
+                            <label for="Time-Slot">Time Slot</label><br>
+                            <input type="time" id="Time-Slot" name="Time Slot" placeholder="--:--">
+                        </div>
+                    </div>
+                    <div class="flex-column lazy-reveal input-group">
+                        <label for="Special-Occasion" id="Special-Occasion">Special Occasion?</label>
+                        <textarea id="Special-Occasion" name="Special-Occasion" cols="40" rows="8"
+                            placeholder="Tell us if it is a birthday or an anniversary or just because!"></textarea>
+                    </div>
+                    <div class="flex-center lazy-reveal" id="reserve-btn-box">
+                        <button id="reserve-btn" class="flex-center lazy-reveal" type="submit">Book my table<svg
+                                xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                viewBox="0 0 24 24">
+                                <!--Boxicons v3.0.8 https://boxicons.com | License  https://docs.boxicons.com/free-->
+                                <path
+                                    d="m10.5 5 1-.67 1 .67-.33-1.17.83-.71L12 3l-.5-1-.5 1-1 .12.83.71zm9.83 8.67L19.5 12l-.83 1.67-1.67.21 1.39 1.18-.56 1.94 1.67-1.11L21.17 17l-.56-1.94L22 13.88zM4.83 9 6.5 7.89 8.17 9l-.56-1.95L9 5.88l-1.67-.21L6.5 4l-.83 1.67L4 5.88l1.39 1.17zm13.88-6.71a.996.996 0 0 0-1.41 0l-15.01 15a.996.996 0 0 0 0 1.41l3 3c.2.2.45.29.71.29s.51-.1.71-.29l15-15a.996.996 0 0 0 0-1.41zM6 19.59 4.41 18l9.09-9.09 1.59 1.59zm10.5-10.5L14.91 7.5 18 4.41 19.59 6z">
+                                </path>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="flex-start-end lazy-reveal">
+        <div class="flex-around" id="footer">
+            <div class="flex-column lazy-reveal" id="footer-left">
+                <h3>Conuts Magic</h3>
+                <p>&copy; 2024 Conuts Magic. Made with sprinkles!</p>
+            </div>
+            <div class="flex-between lazy-reveal" id="footer-center">
+                <p>Privacy</p>
+                <p>Terms</p>
+                <p>Allergens</p>
+            </div>
+            <div class="flex-center lazy-reveal" id="footer-right">
+                <button id="share-btn" class="flex-center links">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="black" viewBox="0 0 24 24">
+                        <!--Boxicons v3.0.8 https://boxicons.com | License  https://docs.boxicons.com/free-->
+                        <path
+                            d="M5.5 15.5c1.07 0 2.02-.5 2.67-1.26l6.87 3.87c-.01.13-.04.26-.04.39 0 1.93 1.57 3.5 3.5 3.5s3.5-1.57 3.5-3.5-1.57-3.5-3.5-3.5c-1.07 0-2.02.5-2.67 1.26l-6.87-3.87c.01-.13.04-.26.04-.39s-.02-.26-.04-.39l6.87-3.87C16.47 8.5 17.42 9 18.5 9 20.43 9 22 7.43 22 5.5S20.43 2 18.5 2 15 3.57 15 5.5c0 .13.02.26.04.39L8.17 9.76A3.48 3.48 0 0 0 5.5 8.5C3.57 8.5 2 10.07 2 12s1.57 3.5 3.5 3.5m13 1.5c.83 0 1.5.67 1.5 1.5s-.67 1.5-1.5 1.5-1.5-.67-1.5-1.5.67-1.5 1.5-1.5m0-13c.83 0 1.5.67 1.5 1.5S19.33 7 18.5 7 17 6.33 17 5.5 17.67 4 18.5 4m-13 6.5c.83 0 1.5.67 1.5 1.5s-.67 1.5-1.5 1.5S4 12.83 4 12s.67-1.5 1.5-1.5">
+                        </path>
+                    </svg>
+                </button>
+                <button id="like-btn" class="flex-center links">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="black" viewBox="0 0 24 24">
+                        <!--Boxicons v3.0.8 https://boxicons.com | License  https://docs.boxicons.com/free-->
+                        <path
+                            d="M11.29 20.66c.2.2.45.29.71.29s.51-.1.71-.29l7.5-7.5c2.35-2.35 2.35-6.05 0-8.41-2.3-2.28-5.85-2.35-8.21-.2-2.36-2.15-5.91-2.09-8.21.2-2.35 2.36-2.35 6.06 0 8.41zM5.21 6.16C6 5.38 7 4.99 8.01 4.99s2.01.39 2.79 1.17l.5.5c.39.39 1.02.39 1.41 0l.5-.5c1.56-1.56 4.02-1.56 5.59 0 1.56 1.57 1.56 4.02 0 5.58l-6.79 6.79-6.79-6.79a3.91 3.91 0 0 1 0-5.58Z">
+                        </path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </footer>
+    <script>
+        const sections = document.querySelectorAll(
+            "#landing-page1, #landing-page2, #menu, #reserve"
+        );
+
+        const navLinks = document.querySelectorAll("#nav-links a");
+
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+
+                        navLinks.forEach((link) => {
+                            link.classList.remove("active");
+
+                            if (link.getAttribute("href") === "#" + entry.target.id) {
+                                link.classList.add("active");
+                            }
+                        });
+
+                    }
+                });
+            },
+            {
+                threshold: 0.5,
+                rootMargin: "-80px 0px -20% 0px"
             }
+        );
+
+        sections.forEach((section) => {
+            observer.observe(section);
         });
 
         document.querySelectorAll("#nav-links a").forEach(link => {
             link.classList.add("hover")
-        })
+        });
+
+        // Intersection Observer for lazy reveal animations
+        const lazyRevealObserver = new IntersectionObserver((entries) => {
+            entries.forEach((entry, index) => {
+                if (entry.isIntersecting) {
+                    // Stagger animation for menu cards
+                    const delay = entry.target.classList.contains('menu-card')
+                        ? index * 120
+                        : 0;
+                    setTimeout(() => {
+                        entry.target.classList.add('revealed');
+                    }, delay);
+                    lazyRevealObserver.unobserve(entry.target);
+                }
+            });
+        }, {
+            threshold: 0.15,
+            rootMargin: '0px 0px -50px 0px'
+        });
+
+        document.querySelectorAll('.lazy-reveal').forEach(el => {
+            lazyRevealObserver.observe(el);
+        });
     </script>
 </body>
 
