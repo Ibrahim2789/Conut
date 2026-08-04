@@ -100,6 +100,10 @@ header {
   position: sticky;
 }
 
+p {
+  font-family: "Quicksand", sans-serif;
+  font-size: 1rem;
+}
 /* Horizontal rule styling */
 hr {
   margin-top: 12px;
@@ -111,7 +115,8 @@ h1 {
   font-family: "Plus Jakarta Sans", sans-serif;
   font-size: 45px;
 }
-h3 {
+h3,
+h5 {
   font-family: "Plus Jakarta Sans", sans-serif;
 }
 /* ======================== 4. HEADER & NAVIGATION ======================== */
@@ -672,6 +677,12 @@ button:active {
 }
 #left-card-inner2 {
   gap: 20px;
+}
+.small-card-heading {
+  font-size: 0.8rem;
+}
+.small-card-text {
+  font-size: 0.8rem;
 }
 
 /* Right card - reservation form container */
