@@ -91,8 +91,6 @@ html,
 body {
   background-color: var(--neutral);
   scroll-behavior: smooth;
-  scrollbar-color: var(--primary-second) var(--neutral);
-  scrollbar-width: auto;
 }
 
 /* Sticky header fallback (overridden below by fixed positioning) */
@@ -100,10 +98,6 @@ header {
   position: sticky;
 }
 
-p {
-  font-family: "Quicksand", sans-serif;
-  font-size: clamp(0.8rem, 1.2vw, 1rem);
-}
 /* Horizontal rule styling */
 hr {
   margin-top: 12px;
@@ -113,11 +107,9 @@ hr {
 /* Global heading font */
 h1 {
   font-family: "Plus Jakarta Sans", sans-serif;
-  font-size: clamp(1.5rem, 3.5vw, 5rem);
+  font-size: 45px;
 }
-
-h3,
-h5 {
+h3 {
   font-family: "Plus Jakarta Sans", sans-serif;
 }
 /* ======================== 4. HEADER & NAVIGATION ======================== */
@@ -129,7 +121,7 @@ header {
   border-bottom: 4px solid black;
   padding-bottom: 8px;
   z-index: 1000;
-  background-color: var(--neutral);
+  background-color: #e8e2d5;
 }
 /* Nav container padding */
 nav {
@@ -140,7 +132,7 @@ nav {
 /* Brand logo - large bold text with shadow */
 #navbar-logo {
   color: var(--primary-second);
-  font-size: clamp(1.5rem, 2.5vw, 3rem);
+  font-size: 30px;
   font-weight: bolder;
   font-family: "Plus Jakarta Sans", sans-serif;
   text-shadow: 4px 4px 4px #bfb9ac;
@@ -164,7 +156,6 @@ nav {
 #nav-links a:hover {
   color: var(--primary-second);
   border-bottom: 3px solid var(--secondary);
-  cursor: pointer;
 }
 
 /* Active nav link - bold with yellow underline (set by JS on scroll) */
@@ -180,7 +171,7 @@ button {
   border-radius: 18px;
   width: 100px;
   max-height: 35px;
-  font-size: clamp(0.6rem, 0.9vw, 1rem);
+  font-size: 12px;
   color: var(--neutral);
   box-shadow: 5px 5px 0px black;
   background-color: var(--primary-second);
@@ -190,13 +181,12 @@ button:active {
   transform: translateY(2px);
   box-shadow: 2px 2px 0 black;
 }
-button:hover {
-  cursor: url("assets/magic.svg"), auto;
-}
+
 /* ======================== 5. HERO SECTION (Section 1) ======================== */
 /* Main hero area with headline, buttons, and donut image */
+
 #hero-section {
-  padding: 140px 8%;
+    padding: 140px 8%;
 }
 /* Hero text content container - vertical layout with gap */
 #hero-content {
@@ -224,7 +214,7 @@ button:hover {
 /* Badge inner text styling */
 #new-flavors-text {
   color: #000;
-  font-size: clamp(0.8rem, 1.3vw, 1.2rem);
+  font-size: 2rem;
   text-align: center;
 }
 /* CTA buttons container */
@@ -255,10 +245,6 @@ button:hover {
   justify-content: center;
   align-items: center;
   position: relative;
-}
-#hero-image-wrapper {
-  width: min(20rem, 90vw);
-  height: min(20rem, 90vw);
 }
 /* The main donut image inside the hero - floats with animation */
 #hero-donut-image {
@@ -342,17 +328,7 @@ button:hover {
   background-color: #f6f0e3;
   width: 100%;
   min-height: 100vh;
-  padding-bottom: clamp(2rem, 4vw, 4rem);
-}
-@media (max-width: 768px) {
-  #garden-header {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  #browse-flavors-btn {
-    margin-top: clamp(1rem, 2vw, 2rem);
-  }
+  padding-bottom: 4rem;
 }
 /* Bestseller badge row - ensures full width for badge + star icon */
 #bestseller-badge-row {
@@ -458,7 +434,7 @@ button:hover {
   border-radius: 16px;
   width: 45px;
   min-height: 22px;
-  font-size: clamp(0.6rem, 0.9vw, 1rem);
+  font-size: 12px;
 }
 /* Info wrappers for Glaze Maze and Sky Dust card text */
 #glaze-maze-info,
@@ -505,7 +481,7 @@ button:hover {
   rotate: 1.5deg;
 }
 #menu-heading h1 {
-  font-size: clamp(1.5rem, 2.5vw, 2.5rem);
+  font-size: 1.8rem;
   color: var(--primary-second);
 }
 /* Menu description text */
@@ -520,8 +496,8 @@ button:hover {
   display: grid;
   grid-area: main-menu;
   grid-template-columns: 2fr 2fr;
-  grid-template-rows: auto auto auto;
-  gap: clamp(1rem, 2vw, 2rem);
+  grid-template-rows: 40px 2fr 2fr;
+  gap: 20px;
   justify-items: center;
 }
 
@@ -608,13 +584,13 @@ button:hover {
   color: var(--primary-second);
 }
 .menu-card h3 {
-  font-size: clamp(1.25rem, 1.6vw, 1.5rem);
+  font-size: 1rem;
 }
 .menu-card p {
-  font-size: clamp(0.8rem, 1vw, 1rem);
+  font-size: 0.8rem;
 }
 .menu-card-button {
-  font-size: clamp(0.8rem, 1vw, 1rem);
+  font-size: 0.8rem;
 }
 #item2 span {
   color: #006a65;
@@ -664,16 +640,8 @@ button:hover {
 
 /* Main reservation card container - centered with padding and gap */
 #reserve-full-card {
-  padding: clamp(2rem, 4vw, 4rem);
-  gap: clamp(2rem, 4vw, 4rem);
-}
-
-@media (max-width: 768px) {
-  #reserve-full-card {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
+  padding: 4rem;
+  gap: 40px;
 }
 /* Info cards within reservation left side (Celebrate / Instant Confirmation) */
 .reserve-card {
@@ -701,12 +669,6 @@ button:hover {
 }
 #left-card-inner2 {
   gap: 20px;
-}
-.small-card-heading {
-  font-size: clamp(1rem, 1.2vw, 1.2rem);
-}
-.small-card-text {
-  font-size: clamp(0.8rem, 1vw, 1rem);
 }
 
 /* Right card - reservation form container */
@@ -746,7 +708,7 @@ select {
 /* Party size dropdown option styling */
 #party-size option {
   font-family: "Quicksand", sans-serif;
-  font-size: clamp(0.8rem, 1vw, 1rem);
+  font-size: 1rem;
   color: #811d57;
   background: #fff9ec;
 }
@@ -784,13 +746,11 @@ select {
 input:focus {
   outline: none;
   border-color: var(--primary-second);
-  cursor: text;
 }
 
 textarea:focus {
   outline: none;
   border-color: var(--primary-second);
-  cursor: text;
 }
 #Time-Slot {
   transition: transform 0.3s ease;
@@ -798,7 +758,6 @@ textarea:focus {
 }
 #Time-Slot:hover {
   transform: translateY(-2px);
-  cursor: pointer;
 }
 /* #party-size:focus {
   outline: none;
@@ -822,7 +781,7 @@ textarea {
 #reserve-right-card label {
   font-family: "Quicksand", sans-serif;
   color: #7a776c;
-  font-size: clamp(0.8rem, 1vw, 1rem);
+  font-size: 0.8rem;
 }
 .input-group {
   gap: 6px;
@@ -853,7 +812,7 @@ textarea::placeholder,
 select::placeholder {
   font-family: "Quicksand", sans-serif;
   color: #7a776c;
-  font-size: clamp(0.8rem, 1vw, 1rem);
+  font-size: 0.8rem;
 }
 
 /* Reserve info card hover rotation */
@@ -898,3 +857,9 @@ footer {
   background-color: white;
   border: 2px solid black;
 }
+
+/* @media (max-width: 768px) {
+  #landing2-pre1 {
+    flex-direction: column;
+  }
+} */
