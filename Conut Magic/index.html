@@ -452,12 +452,15 @@
                 <div class="flex-column lazy-reveal" id="reserve-right-card">
                     <!-- Input: Name -->
                     <div class="flex-column lazy-reveal input-group" id="right-card-inner1">
+                      <form action="reserve">
                         <label for="name">Name of Magic Seeker:</label>
                         <input type="text" name="name" id="name" placeholder="Your name...">
+                      </form>
                     </div>
                     <!-- Input Row: Party Size (select) + Time Slot (time picker) -->
                     <div class="flex-center lazy-reveal input-group" id="two-inputs">
                         <div>
+                          <form action="reserve">
                             <label for="party-size">Party Size</label><br>
                             <select id="party-size" name="party-size">
                                 <option value="2">2 Magic Persons</option>
@@ -465,17 +468,22 @@
                                 <option value="6">6 Magic Persons</option>
                                 <option value="8">8 Magic Persons</option>
                             </select>
+                          </form>
                         </div>
                         <div class="lazy-reveal input-group">
+                          <form action="reserve">
                             <label for="Time-Slot">Time Slot</label><br>
                             <input type="datetime-local" id="Time-Slot" name="Time Slot" placeholder="--:--">
+                          </form>
                         </div>
                     </div>
                     <!-- Input: Special Occasion (textarea) -->
                     <div class="flex-column lazy-reveal input-group">
+                      <form action="reserve">
                         <label for="Special-Occasion" id="Special-Occasion">Special Occasion?</label>
                         <textarea id="Special-Occasion" name="Special-Occasion" cols="40" rows="8"
                             placeholder="Tell us if it is a birthday or an anniversary or just because!"></textarea>
+                      </form>
                     </div>
                     <!-- Submit Button: "Book my table" -->
                     <div class="flex-center lazy-reveal" id="reserve-btn-box">
